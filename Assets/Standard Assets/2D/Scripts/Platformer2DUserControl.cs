@@ -36,5 +36,16 @@ namespace UnityStandardAssets._2D
             m_Character.Move(h, crouch, m_Jump);
             m_Jump = false;
         }
+        void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.name.Equals("Moving"))
+                this.transform.parent = col.transform;
+        }
+
+        void OnCollisionExit2D(Collision2D col)
+        {
+            if (col.gameObject.name.Equals("Moving"))
+                this.transform.parent = null;
+        }
     }
 }
