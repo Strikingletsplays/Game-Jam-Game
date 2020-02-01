@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 893382771}
   - component: {fileID: 893382772}
   m_Layer: 0
-  m_Name: Moving1
+  m_Name: Moving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,6 +643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551d56bedbc49e142bef4df7dd6a608c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftXpos: 22
+  RightXpos: 10
 --- !u!1 &1068326907
 GameObject:
   m_ObjectHideFlags: 0
