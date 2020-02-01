@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour {
 	
-	float dirX, moveSpeed = 3f;
+	public float dirX, moveSpeed = 3f;
 	bool moveRight = true;
 	public float leftXpos = 22f;
 	public float RightXpos = 10f;
