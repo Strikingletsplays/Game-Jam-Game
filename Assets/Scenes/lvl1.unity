@@ -6557,7 +6557,7 @@ MonoBehaviour:
   offsetX: 2
   hasARightBuddy: 0
   hasALeftBuddy: 0
-  reverseScale: 1
+  reverseScale: 0
 --- !u!212 &1431383464
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6597,8 +6597,8 @@ SpriteRenderer:
   m_SortingLayerID: 933142413
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 84e5bf005e254b7408b09c87a66f0c3a, type: 3}
-  m_Color: {r: 0.8679245, g: 0.6853225, b: 0.53631186, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4277893f761a4234f9f41e9177abcbe5, type: 3}
+  m_Color: {r: 0.8207547, g: 0.73171055, b: 0.7665485, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
