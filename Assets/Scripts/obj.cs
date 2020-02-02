@@ -8,14 +8,17 @@ public class obj : MonoBehaviour {
 
     [SerializeField]
     private Text pickUpText;
+    public Image Canvas;
     public GameObject Arrows;
-    public Image Screw, Cogg, imgLife3;
+    public GameObject End;
+    public Image Screw, Cogg, Pipe;
     private bool pickUpAllowed;
 
     // Use this for initialization
     private void Start () {
         pickUpText.gameObject.SetActive(false);
-	}
+
+    }
 	
 	// Update is called once per frame
 	private void Update () {
@@ -28,6 +31,7 @@ public class obj : MonoBehaviour {
         if (collision.gameObject.name.Equals("Mikatroon"))
         {
             pickUpText.gameObject.SetActive(true);
+            Canvas.gameObject.SetActive(true);
             pickUpAllowed = true;
         }        
     }
@@ -37,6 +41,7 @@ public class obj : MonoBehaviour {
         if (collision.gameObject.name.Equals("Mikatroon"))
         {
             pickUpText.gameObject.SetActive(false);
+            Canvas.gameObject.SetActive(false);
             pickUpAllowed = false;
         }
     }
@@ -48,8 +53,13 @@ public class obj : MonoBehaviour {
             Screw.gameObject.SetActive(true);
         if (this.gameObject.name == "gear")
             Cogg.gameObject.SetActive(true);
-        if(Screw.gameObject.activeSelf && Cogg.gameObject.activeSelf)
+        if (this.gameObject.name == "pipe")
+            Pipe.gameObject.SetActive(true);
+        if (Screw.gameObject.activeSelf && Cogg.gameObject.activeSelf)
          Arrows.gameObject.SetActive(true);
+
+        if (Screw.gameObject.activeSelf && Cogg.gameObject.activeSelf && Pipe.gameObject.activeSelf)
+            End.gameObject.SetActive(true);
     }
 
 }
