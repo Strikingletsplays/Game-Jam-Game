@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class obj : MonoBehaviour {
 
     [SerializeField]
     private Text pickUpText;
+    public Image HUDCanvas;
     public Image Canvas;
     public GameObject Arrows;
     public GameObject End;
@@ -17,7 +19,6 @@ public class obj : MonoBehaviour {
     // Use this for initialization
     private void Start () {
         pickUpText.gameObject.SetActive(false);
-
     }
 	
 	// Update is called once per frame
@@ -50,16 +51,35 @@ public class obj : MonoBehaviour {
     {
         Destroy(gameObject);
         if (this.gameObject.name == "screw")
+        {
+            HUDCanvas.gameObject.SetActive(true);
             Screw.gameObject.SetActive(true);
+        }
+            
         if (this.gameObject.name == "gear")
+        {
+            HUDCanvas.gameObject.SetActive(true);
             Cogg.gameObject.SetActive(true);
+        }
+            
         if (this.gameObject.name == "pipe")
+        {
+            HUDCanvas.gameObject.SetActive(true);
             Pipe.gameObject.SetActive(true);
+        }
+            
+        
         if (Screw.gameObject.activeSelf && Cogg.gameObject.activeSelf)
          Arrows.gameObject.SetActive(true);
 
         if (Screw.gameObject.activeSelf && Cogg.gameObject.activeSelf && Pipe.gameObject.activeSelf)
+        {
             End.gameObject.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Escape)){
+                SceneManager.LoadScene("Menu");
+            }
+        }
+            
     }
 
 }
