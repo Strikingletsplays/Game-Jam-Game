@@ -75,9 +75,11 @@ public class obj : MonoBehaviour {
         if (Screw.gameObject.activeSelf && Cogg.gameObject.activeSelf && Pipe.gameObject.activeSelf)
         {
             End.gameObject.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Escape)){
-                SceneManager.LoadScene("Menu");
-            }
+ //           if (Input.GetKeyDown(KeyCode.Return))
+ //               {
+ //                  Application.Quit();
+ //                   Debug.Log("trexi vre");
+ //               }
         }
             
     }
